@@ -6,7 +6,7 @@ import "./index.css";
 import App from "./components/App";
 import registerServiceWorker from "./registerServiceWorker";
 
-import { healthCheck } from "./api/health";
+// import { healthCheck } from "./api/health";
 
 const store = configureStore();
 
