@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { GoogleApiWrapper, Map } from 'google-maps-react';
-import {Button} from "./Button";
 
 const { REACT_APP_GOOGLE_MAPS_API_KEY } = process.env;
 

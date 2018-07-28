@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import MapContainer from "./MapContainer";
 import Button from "./Button";
-import logo from "../logo.svg";
 import "../App.css";
 
 class App extends Component {
