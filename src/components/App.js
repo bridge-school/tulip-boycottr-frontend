@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-import MapContainer from "./components/MapContainer";
+import MapContainer from "./MapContainer";
 import Button from "./components/Button";
-import logo from "./logo.svg";
-import "./App.css";
+import logo from "../logo.svg";
+import "../App.css";
 
 class App extends Component {
   constructor() {
