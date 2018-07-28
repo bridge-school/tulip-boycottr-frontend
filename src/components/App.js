@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import GoogleMapsComponent from "./MapContainer";
+import Button from "./Button";
 import logo from "../logo.svg";
 import "../App.css";
 
@@ -8,14 +9,11 @@ class App extends Component {
   constructor() {
     super();
   }
+
   componentDidMount() {
     // this is here as an example for how to connect to the backend
     // it should be removed once development has started
     // this.props.healthCheck();
-  }
-
-  alert() {
-    alert('you clicked the button');
   }
 
   render() {

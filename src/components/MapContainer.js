@@ -68,7 +68,6 @@ export class GoogleMapsComponent extends Component {
             lng: userLng
           }
         }
-        style = {style}
       >
         {MarkerList({markerData: this.props.markerData})}
       </Map> 
