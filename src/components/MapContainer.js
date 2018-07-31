@@ -44,19 +44,22 @@ export class BoycottMap extends Component {
 
 
   render() {
+    const { userLat, userLng } = this.state;
     return (
-      <Map
-        google = {this.props.google}
-        zoom = {10}
-        center = {
-          {
-            lat: this.state.userLat,
-            lng: this.state.userLng
-          }
-        }
-      >
-      {MarkerList({markerData: this.props.markerData})}
-      </Map>
+       userLat && userLng 
+        ? <Map 
+            google = {this.props.google}
+            zoom = {10}
+            initialCenter = {
+              {
+                lat: this.state.userLat,
+                lng: this.state.userLng
+              }
+            }
+          >
+            {MarkerList({markerData: this.props.markerData})}
+          </Map>
+      : <p>Loading</p>  
     );
   }
 }
