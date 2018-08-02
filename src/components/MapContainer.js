@@ -52,7 +52,6 @@ export class GoogleMapsComponent extends Component {
    this.props.fetchUserLocation();
   }
 
-  
   render() {
     const { isLoading, userLat, userLng } = this.props;
     return (
@@ -60,6 +59,7 @@ export class GoogleMapsComponent extends Component {
         ? <p>Loading</p>
         : <Map 
         google = {this.props.google}
+        className = "map"
         zoom = {10}
         initialCenter = {
           {
@@ -67,6 +67,7 @@ export class GoogleMapsComponent extends Component {
             lng: userLng
           }
         }
+        style = {style}
       >
         {MarkerList({markerData: this.props.markerData})}
       </Map> 

@@ -27,3 +27,9 @@
   to { transform: rotate(360deg); }
 }
 
+.map {
+  display: block;
+  width: 300px !important;
+  position: static !important;
+}
+
