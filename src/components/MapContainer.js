@@ -55,6 +55,14 @@ export class GoogleMapsComponent extends Component {
   
   render() {
     const { isLoading, userLat, userLng } = this.props;
+    const style = {
+      'width': '85%',
+      'margin': '0 auto',
+      'display': 'block',
+      'height' : '65vh',
+      'position': 'static'
+    }
+
     return (
        isLoading
         ? <p>Loading</p>
@@ -67,6 +75,7 @@ export class GoogleMapsComponent extends Component {
             lng: userLng
           }
         }
+        style = {style}
       >
         {MarkerList({markerData: this.props.markerData})}
       </Map> 
