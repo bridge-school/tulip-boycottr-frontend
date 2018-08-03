@@ -6,10 +6,6 @@ import logo from "../logo.svg";
 import "../App.css";
 
 class App extends Component {
-  constructor() {
-    super();
-  }
-
   componentDidMount() {
     // this is here as an example for how to connect to the backend
     // it should be removed once development has started
