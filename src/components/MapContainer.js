@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import { GoogleApiWrapper, Map, Marker } from 'google-maps-react';
 import { connect } from 'react-redux';
 import { loadBoycotts } from '../actions/boycottActions'
 import { fetchUserLocationInformation } from '../actions/googleMapsActions';
+=======
+import { GoogleApiWrapper, Map } from 'google-maps-react';
+import {Button} from "./Button";
+>>>>>>> Added styling to MapContainer, created Button Component, added Button Component to App.js
 
 const { REACT_APP_GOOGLE_MAPS_API_KEY } = process.env;
 
@@ -52,6 +57,7 @@ export class GoogleMapsComponent extends Component {
    this.props.fetchUserLocation();
   }
 
+<<<<<<< HEAD
   
   render() {
     const { isLoading, userLat, userLng } = this.props;
@@ -59,7 +65,21 @@ export class GoogleMapsComponent extends Component {
        isLoading
         ? <p>Loading</p>
         : <Map 
+=======
+  render() {
+    const style = {
+      width: '50vw',
+      height: '75vh',
+      'marginLeft': 'auto',
+      'marginRight': 'auto',
+      position: 'static'
+    }
+
+    return ( 
+      <Map 
+>>>>>>> Added styling to MapContainer, created Button Component, added Button Component to App.js
         google = {this.props.google}
+        className = "map"
         zoom = {10}
         initialCenter = {
           {
@@ -67,6 +87,7 @@ export class GoogleMapsComponent extends Component {
             lng: userLng
           }
         }
+        style = {style}
       >
         {MarkerList({markerData: this.props.markerData})}
       </Map> 
