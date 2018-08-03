@@ -7,8 +7,6 @@ import "../App.css";
 class App extends Component {
   constructor() {
     super();
-
-    this.alert = this.alert.bind(this);
   }
   componentDidMount() {
     // this is here as an example for how to connect to the backend
@@ -32,7 +30,7 @@ class App extends Component {
               <GoogleMapsComponent
                 className="map" 
               />
-              <Button buttonText="Add Boycott" onClickHandler={this.alert} />  
+              <Button buttonText="Add Boycott"/>  
           </div>
         </div>
       </div>
