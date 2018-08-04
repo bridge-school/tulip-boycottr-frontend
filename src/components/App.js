@@ -5,12 +5,15 @@ import Button from "./Button";
 import BoycottModal from "./BoycottModal";
 import logo from "../logo.svg";
 import "../App.css";
+import 'bulma/css/bulma.css'
 
 class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { isOpen: false };
+    this.state = { 
+      isActive: false 
+    };
 
     this.toggleModal = this.toggleModal.bind(this);
   }
@@ -23,7 +26,7 @@ class App extends Component {
 
   toggleModal = () => {
     this.setState({
-      isOpen: !this.state.isOpen
+      isActive: !this.state.isActive
     });
   }
 
@@ -35,10 +38,10 @@ class App extends Component {
           <h1 className="App-title">Welcome to Boycottr</h1>
         </header>
         <Button buttonText="Add Boycott" onClickHandler={this.toggleModal}/>
-        <BoycottModal show={this.state.isOpen}
-          onClose={this.toggleModal}>
-          Here's some content for the modal
-        </BoycottModal>
+        <BoycottModal 
+          isActive={this.state.isActive}
+          onClose={this.toggleModal}
+         />
         <div className="App-intro">
           <div className="map-container">
               <GoogleMapsComponent
