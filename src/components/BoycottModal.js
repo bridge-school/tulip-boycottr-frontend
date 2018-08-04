@@ -28,4 +28,10 @@ export class BoycottModal extends Component {
       }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        isActive: state.modal.isActive
+    }
+}
+
 export default BoycottModal;
