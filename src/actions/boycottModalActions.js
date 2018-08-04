@@ -4,19 +4,19 @@ export const MODAL_ACTIONS = {
 }
 
 export const openModal = dispatch => {
-    dispatch({
+    return {
         type: MODAL_ACTIONS.IS_ACTIVE,
         payload: {
             isActive: true
         }
-    })
+    }
 }
 
 export const closeModal = dispatch => {
-    dispatch({
+    return {
         type: MODAL_ACTIONS.IS_INACTIVE,
         payload: {
             isActive: false
         }
-    })
+    }
 }

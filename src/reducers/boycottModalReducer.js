@@ -9,13 +9,13 @@ export const boycottModalReducer = (state = INITIAL_MODAL_STATE, action = {}) =>
         case MODAL_ACTIONS.IS_ACTIVE: {
             return {
                 ...state,
-                isActive: true,
+                isActive: action.payload.isActive,
             }
         }
         case MODAL_ACTIONS.IS_INACTIVE: {
             return {
                 ...state,
-                isActive: false
+                isActive: action.payload.isActive
             }
         }
         default: {

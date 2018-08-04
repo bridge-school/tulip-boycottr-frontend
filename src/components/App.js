@@ -6,6 +6,7 @@ import BoycottModal from "./BoycottModal";
 import logo from "../logo.svg";
 import "../App.css";
 import 'bulma/css/bulma.css'
+import { openModal, closeModal } from '../actions/boycottModalActions'
 
 class App extends Component {
   constructor(props) {
@@ -37,9 +38,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to Boycottr</h1>
         </header>
-        <Button buttonText="Add Boycott" onClickHandler={this.toggleModal}/>
+        <Button buttonText="Add Boycott" onClickHandler={openModal}/>
         <BoycottModal 
-          isActive={this.state.isActive}
+          isActive={this.props.isActive}
           onClose={this.toggleModal}
          />
         <div className="App-intro">
