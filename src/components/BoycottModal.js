@@ -1,4 +1,5 @@
 import React from 'react';
+import BoycottReasonForm from './BoycottForm';
 
 export default ({isActive, onModalToggle}) => (
         isActive ?
@@ -13,6 +14,7 @@ export default ({isActive, onModalToggle}) => (
                         ></button>
                     </header>
                     <section className="modal-card-body">
+                        <BoycottReasonForm onSubmit={this.submit} />
                     </section>
                     <footer className="modal-card-foot">
                     </footer>
