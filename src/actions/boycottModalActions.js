@@ -1,22 +1,10 @@
 export const MODAL_ACTIONS = {
-    IS_ACTIVE: "IS_ACTIVE",
-    IS_INACTIVE: "IS_INACTIVE"
+    TOGGLE_MODAL: "TOGGLE_MODAL",
 }
 
-export const openModal = dispatch => {
+export const toggleModal = modalState => {
     return {
-        type: MODAL_ACTIONS.IS_ACTIVE,
-        payload: {
-            isActive: true
-        }
-    }
-}
-
-export const closeModal = dispatch => {
-    return {
-        type: MODAL_ACTIONS.IS_INACTIVE,
-        payload: {
-            isActive: false
-        }
+        type: MODAL_ACTIONS.TOGGLE_MODAL,
+        payload: modalState
     }
 }
