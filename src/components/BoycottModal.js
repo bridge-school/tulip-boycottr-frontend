@@ -1,10 +1,29 @@
 import React, { Component } from 'react';
 import BoycottReasonForm from './BoycottForm';
+import { connect } from 'react-redux';
+import { updateBoycotts } from '../actions/boycottActions';
+
+const mapStateToProps = (state) => {
+    return {
+      markerData: state.boycottLocations,
+      
+    }
+  
+  }
+  
+  const mapDispatchToProps = {
+      updateBoycotts,
+  }
 
 export class BoycottModal extends Component {
+
     submit = values => {
+        console.log(this.props.updateBoycotts);
         //print the form values to console
-        console.log(values);
+        this.props.updateBoycotts(values);
+        
+        //create a post to send the form to the backend
+
     }
     render() {
         //Render nothing if the "show" prop is false
@@ -34,4 +53,7 @@ export class BoycottModal extends Component {
       }
 }
 
-export default BoycottModal;
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  )(BoycottModal);
